@@ -6,10 +6,16 @@ def guessing(number):
     while number != integer:
         if number < integer:
             print("Guess a higher number")
-            input("Enter another number:")
+            input("Enter another number: ")
         elif number > integer:
             print("Guess a lower number.")
             input("Enter another number.")
+        elif str(number) == integer:
+            print("The number was {0}".format(integer))
+            break
+        else:
+            return("You guessed the number. It was {0}".format(integer))
+            
 
 
 number = int(input("Enter a number: "))
